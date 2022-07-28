@@ -207,36 +207,21 @@ class _WorkOutListState extends State<WorkOutList> {
   Widget toDoCards(MongoDbModel data) {
     Text title;
 
-    Text workout;
-
     if (data.isChecked == true) {
       title = Text(
-        data.title,
+        "${data.title}" "${data.count}x${data.reps}",
         style: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 18,
-          decoration: TextDecoration.lineThrough,
-        ),
-      );
-      workout = Text(
-        "${data.count}x${data.reps}",
-        style: const TextStyle(
-          fontSize: 16,
+          fontSize: 23,
           decoration: TextDecoration.lineThrough,
         ),
       );
     } else {
       title = Text(
-        data.title,
+        "${data.title} " "${data.count}x${data.reps}",
         style: const TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 16,
-        ),
-      );
-      workout = Text(
-        "${data.count}x${data.reps}",
-        style: const TextStyle(
-          fontSize: 20,
+          fontSize: 23,
         ),
       );
     }
@@ -257,10 +242,9 @@ class _WorkOutListState extends State<WorkOutList> {
               }),
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 title,
-                workout,
                 const SizedBox(height: 5),
               ],
             ),
