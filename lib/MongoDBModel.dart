@@ -15,24 +15,28 @@ class MongoDbModel {
   MongoDbModel(
       {required this.id,
       required this.title,
-      required this.description,
+      required this.count,
+      required this.reps,
       required this.isChecked});
 
   ObjectId id;
   String title;
-  String description;
+  int count;
+  int reps;
   bool isChecked;
 
   factory MongoDbModel.fromJson(Map<String, dynamic> json) => MongoDbModel(
       id: json["_id"],
       title: json["title"],
-      description: json["description"],
+      count: json["count"],
+      reps: json["reps"],
       isChecked: json["isChecked"]);
 
   Map<String, dynamic> toJson() => {
         "_id": id,
         "title": title,
-        "description": description,
+        "count": count,
+        "reps": reps,
         "isChecked": isChecked,
       };
 }

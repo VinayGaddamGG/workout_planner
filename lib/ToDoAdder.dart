@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 import 'MongoDBModel.dart';
-import 'ToDoList.dart';
+import 'WorkOutList.dart';
 import 'mongodb.dart';
 // ignore: library_prefixes
 import 'package:mongo_dart/mongo_dart.dart' as M;
@@ -74,9 +74,10 @@ class _ToDoAdderState extends State<ToDoAdder> {
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 36, 35, 35),
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 36, 35, 35),
           title: const Text("Create a To Do",
-              style: TextStyle(color: Colors.white, fontSize: 20)),
+              style: TextStyle(color: Colors.white, fontSize: 22)),
         ),
         body: SafeArea(
             child: Padding(
@@ -127,4 +128,4 @@ class _ToDoAdderState extends State<ToDoAdder> {
           ),
         )));
   }
-}
+}*/

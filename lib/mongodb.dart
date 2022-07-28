@@ -29,7 +29,8 @@ class MongoDatabase {
   static Future<void> update(MongoDbModel data) async {
     var user = await userCollection.findOne({"_id": data.id});
     user['title'] = data.title;
-    user['description'] = data.description;
+    user['count'] = data.count;
+    user['reps'] = data.reps;
     user['isChecked'] = data.isChecked;
 
     var saved = await userCollection.save(user);
