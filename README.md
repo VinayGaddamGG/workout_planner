@@ -1,7 +1,9 @@
 # workout_planner
 
 
-A new Flutter project.
+A project that allows users to keep track of their daily workouts
+
+
 
 ## Getting Started
 
